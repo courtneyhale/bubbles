@@ -1,4 +1,4 @@
-var bubbles = [];
+var Square = [];
 
 setup = function () {
   createCanvas(600, 600);
@@ -7,5 +7,12 @@ setup = function () {
 
 draw = function () {
   background(0);
-  // your code goes here
+
+if (mouseIsPressed) square.push(new square(mouseX, mouseY));
+
+ for (var i = 0; i < square.length; ++i) {
+   square[i].update();
+   square[i].display();
+ }
+// your code goes here
 };

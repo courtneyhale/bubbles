@@ -1,22 +1,23 @@
-var Bubble = function (x, y) {
+var Square = function (x, y) {
   this.x = x;
   this.y = y;
 };
 
-Bubble.prototype = {
+Square.prototype = {
 
-  radius: 5,
+  squareHeight: 5,
+  squareWidth: 5,
 
   update: function() {
     this.x += random(-1, 1);
     this.y += random(0, -2);
-    if (this.y - this.radius <= 0) this.y = this.radius + random(0, 2);
+    if (this.y - this.sqaureHeight <= 0) this.y = this.squareHeight + random(0, 2);
   },
 
   display: function () {
     noStroke();
     fill(102, 217, 255, 100);
-    ellipse(this.x, this.y, this.radius * 2, this.radius * 2);
+    rectangle(this.x, this.y, this.sqaureHeight, this.squareWidth);
   }
 
 };
