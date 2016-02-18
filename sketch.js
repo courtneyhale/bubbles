@@ -7,5 +7,14 @@ setup = function () {
 
 draw = function () {
   background(0);
-  // your code goes here
+
+
+  if (mouseIsPressed) bubbles.push(new Bubble(mouseX, mouseY));
+
+  var index = 0;
+  while (index < bubbles.length) {
+    bubbles[index].update();
+    bubbles[index].display();
+    index += 1;
+  }
 };
