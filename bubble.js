@@ -17,7 +17,7 @@ Square.prototype = {
   display: function () {
     noStroke();
     fill(102, 217, 255, 100);
-    rect(this.x, this.y, this.sqaureHeight, this.squareWidth);
+    rect(this.x, this.y, this.squareHeight, this.squareWidth);
   }
 
 };
