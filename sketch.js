@@ -7,6 +7,7 @@ setup = function () {
 
 draw = function () {
   background(0);
+  rect(100,300,200,400);
 
 if (mouseIsPressed) square.push(new square(mouseX, mouseY));
 
