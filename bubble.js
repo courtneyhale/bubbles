@@ -12,6 +12,7 @@ Square.prototype = {
     this.x += random(-1, 1);
     this.y += random(0, -2);
     if (this.y - this.squareHeight <= 0) this.y = this.squareHeight + random(0, 2);
+    if (this.x - this.squareWidth <= 0) this.y = this.squareWidth + random(0, 2);
   },
 
   display: function () {
