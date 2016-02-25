@@ -1,7 +1,7 @@
 var squares = [];
 
 setup = function () {
-  createCanvas(600, 600);
+  createCanvas(600, 500);
   // your code goes here
 };
 
@@ -10,7 +10,7 @@ draw = function () {
 
 if (mouseIsPressed) squares.push(new Square(mouseX, mouseY));
 
- for (var i = 0; i < square.length; ++i) {
+ for (var i = 0; i < squares.length; ++i) {
    squares[i].update();
    squares[i].display();
  }

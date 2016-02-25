@@ -1,24 +1,23 @@
-var square = function (x, y) {
+var Square = function (x, y) {
   this.x = x;
   this.y = y;
 };
 
-square.prototype = {
+Square.prototype = {
 
-  squareHeight: 2,
-  squareWidth: 2,
+  squareSize: 20,
 
   update: function() {
-    this.x += random(-1, 1);
+    if (this.y < height - this.squareSize) this.x + random(-1, 1);
     this.y += random(0, 2);
-    if (this.y - this.squareHeight <= 0) this.y = this.squareHeight + random(0, 2);
-    if (this.x - this.squareWidth <= 0) this.y = this.squareWidth + random(0, 2);
+    if (this.y >= height - this.squareSize) this.y = height - this.squareSize;
+    if (this.x - this.squareSize <= 0) this.x = this.squareSize + random(-1, 1);
   },
 
   display: function () {
     noStroke();
-    fill(102, 217, 255, 100);
-    rect(this.x, this.y, this.squareHeight, this.squareWidth);
+    fill(100, 300, 255, 100);
+    rect(this.x, this.y, this.squareSize, this.squareSize);
   }
 
 };
