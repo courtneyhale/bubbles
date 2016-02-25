@@ -1,16 +1,16 @@
-var Square = function (x, y) {
+var square = function (x, y) {
   this.x = x;
   this.y = y;
 };
 
-Square.prototype = {
+square.prototype = {
 
-  squareHeight: 5,
-  squareWidth: 5,
+  squareHeight: 2,
+  squareWidth: 2,
 
   update: function() {
     this.x += random(-1, 1);
-    this.y += random(0, -2);
+    this.y += random(0, 2);
     if (this.y - this.squareHeight <= 0) this.y = this.squareHeight + random(0, 2);
     if (this.x - this.squareWidth <= 0) this.y = this.squareWidth + random(0, 2);
   },

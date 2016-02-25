@@ -1,4 +1,4 @@
-var Squares = [];
+var squares = [];
 
 setup = function () {
   createCanvas(600, 600);
@@ -8,7 +8,7 @@ setup = function () {
 draw = function () {
   background(0);
 
-if (mouseIsPressed) squares.push(new square(mouseX, mouseY));
+if (mouseIsPressed) squares.push(new Square(mouseX, mouseY));
 
  for (var i = 0; i < square.length; ++i) {
    squares[i].update();
